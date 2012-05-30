@@ -1,5 +1,16 @@
 A simple shell function to display the current pair abbrevations from .pairs
 
+Example:
+--------
+If you have:
+`
+pairs:
+  lt: Linus Torvalds; linus
+	rs: Richard Stallman: rms
+`
+
+Then a `git pair rs lt` will show `(lt+rs)` in your prompt
+
 Usage:
 ------
 
