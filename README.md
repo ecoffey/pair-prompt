@@ -3,7 +3,7 @@ A simple shell function to display the current pair abbrevations from .pairs
 Usage:
 ------
 
-`cd ~ && git clone http://github.com/ecoffey/pair-prompt.git .pair-prompt`
+`cd ~ && git clone https://github.com/ecoffey/pair-prompt.git .pair-prompt`
 
 And then add this to your `.bashrc`:
 
