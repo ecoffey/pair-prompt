@@ -6,7 +6,11 @@ pair_prompt() {
 			fmt="$1"
 		fi
 		local email=$(git config --get user.email)
-		local abbrevs=$(ruby $PAIR_PROMPT_DIR/pair_abbrev_from_email.rb $email)
-		printf -- "${fmt:-}" "$abbrevs"
+		if [ -n "$email" ]; then
+			local abbrevs=$(ruby $PAIR_PROMPT_DIR/pair_abbrev_from_email.rb $email)
+			printf -- "${fmt:-}" "$abbrevs"
+		else
+			printf -- "${fmt:-}" "NO AUTHOR"
+		fi
 	fi
 }
