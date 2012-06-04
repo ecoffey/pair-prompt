@@ -1,7 +1,7 @@
 PAIR_PROMPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 pair_prompt() {
-	tmp=$(git status)
+	tmp=$(git status > /dev/null 2>&1)
 	if [ "$?" == "0" ]; then
 		local email=$(git config --get user.email)
 		local fmt="(%s)"
